@@ -8,13 +8,6 @@
     "compile": "tsc -p . && cp package.json ./build/",
     "compileWatch": "tsc -w -p .",
     "run": "node build/index.js",
-    "wt:deploy": "npm run compile && npm run wt:wt:updateTask",
-    "wt:createTask": "wt create -b ./build/index.js --name starfmcrawler",
-    "wt:createCron": "wt cron create -b --schedule '2-59/1 * * * *' ./build/index.js --tz Europe/Berlin --name starfmcrawler",
-    "wt:updateTask": "wt update starfmcrawler ./build.index.js",
-    "wt:clean": "wt cron rm starfmcrawler && wt rm starfmcrawler",
-    "wt:history": "wt cron history starfmcrawler",
-    "wt:serve-local": "npm run clean && npm run compile && wt serve --storage-file ./wt-local/storage.json ./build/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +17,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "core-js": "^2.6.9",
     "moment": "^2.24.0",
     "webtask-storage-async": "0.0.4"

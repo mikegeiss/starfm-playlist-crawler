@@ -11,10 +11,4 @@ sobald das hochgefahren ist, dann im Browser http://localhost:8080 aufrufen
 
 # Deployment
 
-intitial 
-
-`npm run wt:createTask` und `npm run wt:createCron`
-
-später nur noch 
-
-`npm run wt:deploy`
+`npm run wt:deployFresh` Vorsicht: löscht aktuellen Storage
